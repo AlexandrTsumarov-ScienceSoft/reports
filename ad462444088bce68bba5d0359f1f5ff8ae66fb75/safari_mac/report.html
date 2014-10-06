@@ -110,7 +110,7 @@ function showHide(nodeId, linkObj)
   <body>
     <div class="layout">
       <h1>
-        Codeception Results <small><span style="color: red">FAILED</span> (21.2s)</small>
+        Codeception Results <small><span style="color: green">OK</span> (44.5s)</small>
       </h1>
       <table border="0" style="width: 100%;">
         <tr>
@@ -122,14 +122,14 @@ function showHide(nodeId, linkObj)
         </tr>
         <tr>
           <td>
-            <p class="scenarioFailed" onclick="showHide('1', this)">
-              [+] test ui1: can the plugin be installed and activated? (SetupPluginCest::installPlugin) (21.23s)
+            <p class="scenarioSuccess" onclick="showHide('1', this)">
+              [+] test ui1: can the plugin be installed and activated? (SetupPluginCest::installPlugin) (44.52s)
             </p>
           </td>
         </tr>
         <tr>
           <td>
-            <table border="0" width="100%" class="scenarioFailed scenarioStepsTable" id="stepContainer1">
+            <table border="0" width="100%" class="scenarioSuccess scenarioStepsTable" id="stepContainer1">
               <tr>
                 <td class="stepName">
                   I am on page <span style="color: #732E81;">"/wp-admin/"</span>
@@ -220,6 +220,61 @@ function showHide(nodeId, linkObj)
                   I attach file <span style="color: #732E81;">"pluginzip","laterpay.zip"</span>
                 </td>
               </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"install-plugin-submit"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"Plugin installed successfully"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/wp-admin/plugins.php"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"LaterPay"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/wp-admin/plugins.php"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I click <span style="color: #732E81;">"#laterpay .activate &gt; a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I wait for element <span style="color: #732E81;">"#laterpay .deactivate &gt; a"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I am on page <span style="color: #732E81;">"/wp-admin/plugins.php"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">"LaterPay","#adminmenuwrap"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I try see <span style="color: #732E81;">"BackendTester",".wp-pointer-content"</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="stepName">
+                  I see <span style="color: #732E81;">".wp-pointer-content"</span>
+                </td>
+              </tr>
             </table>
           </td>
         </tr>
@@ -235,7 +290,7 @@ function showHide(nodeId, linkObj)
                     Successful scenarios:
                   </td>
                   <td class="scenarioSuccessValue">
-                    <strong>0</strong>
+                    <strong>1</strong>
                   </td>
                 </tr>
                 <tr>
@@ -243,7 +298,7 @@ function showHide(nodeId, linkObj)
                     Failed scenarios:
                   </td>
                   <td class="scenarioFailedValue">
-                    <strong>1</strong>
+                    <strong>0</strong>
                   </td>
                 </tr>
                 <tr>
